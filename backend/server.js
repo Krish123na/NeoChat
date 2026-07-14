@@ -139,6 +139,13 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "NeoChat API is running 🚀",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
 });
